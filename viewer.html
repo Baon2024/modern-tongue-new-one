@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ModernTongue Translation</title>
+    <link rel="stylesheet" href="viewer.css" />
+  </head>
+  <body>
+    <main class="viewer">
+      <header class="viewer__header">
+        <h1 class="viewer__title">ModernTongue Translation</h1>
+        <p class="viewer__subtitle">PDF selections open here so you can review the results.</p>
+      </header>
+
+      <section id="status-panel" class="viewer__status viewer__status--loading">
+        Fetching translation…
+      </section>
+
+      <section id="result-panel" class="viewer__result" hidden>
+        <div id="offline-banner" class="viewer__banner viewer__banner--warning" hidden>
+          Network issue detected — showing best-effort modernisation.
+        </div>
+        <article class="viewer__card">
+          <h2 class="viewer__cardTitle">Modernised text</h2>
+          <pre id="translation-text" class="viewer__mono"></pre>
+          <button type="button" id="copy-translation" class="viewer__button">Copy modernised text</button>
+        </article>
+
+        <article class="viewer__card">
+          <h2 class="viewer__cardTitle">Original selection</h2>
+          <pre id="original-text" class="viewer__mono viewer__mono--subtle"></pre>
+        </article>
+
+        <p id="quota-hint" class="viewer__hint"></p>
+      </section>
+    </main>
+
+    <script type="module" src="viewer.js"></script>
+  </body>
+</html>

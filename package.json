@@ -1,0 +1,10 @@
+{
+  "name": "moderntongue-free",
+  "version": "1.0.0",
+  "description": "Manifest V3 Chrome extension that modernises historical English with a free Hugging Face model.",
+  "private": true,
+  "scripts": {
+    "lint": "echo \"No lint configured for ModernTongue.\"",
+    "build": "echo \"Package the extension by zipping the project directory.\""
+  }
+}

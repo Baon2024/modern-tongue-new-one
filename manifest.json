@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "ModernTongue",
+  "description": "Modernise historical English into contemporary language from the popup or context menu.",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ModernTongue"
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "https://moderntongue-pi77xsyu2-sel1nabds-projects.vercel.app/*"
+  ]
+}

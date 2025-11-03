@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ModernTongue</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <h1 class="popup__title">ModernTongue</h1>
+        <p class="popup__tagline">Give historic prose a modern voice.</p>
+      </header>
+
+      <form id="modernize-form" class="popup__form">
+        <label class="popup__label" for="source-text">Paste text to modernise</label>
+        <textarea
+          id="source-text"
+          name="source"
+          class="popup__textarea"
+          rows="6"
+          placeholder="Enter pre-20th century English..."
+          required
+        ></textarea>
+        <button type="submit" id="modernize-button" class="popup__submit">✨ Modernise</button>
+      </form>
+
+      <section class="popup__status" id="status-message" role="status" aria-live="polite"></section>
+
+      <section class="popup__translation" id="translation-panel" hidden>
+        <h2 class="popup__translationTitle">Latest modernised text</h2>
+        <pre id="translation-output" class="popup__translationBody"></pre>
+      </section>
+
+      <section class="popup__quota" id="quota-panel">
+        <p class="popup__quotaText">
+          You can modernise up to <strong>50 passages</strong> every rolling 24 hours.
+        </p>
+        <p class="popup__quotaText" id="quota-usage"></p>
+      </section>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
