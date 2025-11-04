@@ -1,6 +1,6 @@
-# ModernTongue (Free Edition)
+# ModernTongue 
 
-ModernTongue is a Manifest V3 Chrome extension that rewrites historical (pre‑20th century) English into contemporary language. It ships without any paid tiers or API keys, relying instead on a free Hugging Face translation model proxied through a tiny Vercel function.
+A Manifest V3 Chrome extension that rewrites historical (pre‑20th century) English into contemporary language. It ships without any paid tiers or API keys, relying instead on a free Hugging Face translation model proxied through a tiny Vercel function.
 
 ## Features
 
