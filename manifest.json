@@ -31,6 +31,7 @@
     }
   ],
   "host_permissions": [
-    "https://moderntongue-pi77xsyu2-sel1nabds-projects.vercel.app/*"
+    "https://moderntongue.vercel.app/*",
+    "https://*.vercel.app/*"
   ]
 }
