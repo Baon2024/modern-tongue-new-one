@@ -2,7 +2,7 @@ import { QuotaStore, MAX_TRANSLATIONS_PER_WINDOW } from '../../shared/quota.js';
 import { modernizeOffline } from '../../shared/fallback.js';
 
 const CONTEXT_MENU_ID = 'modern-tongue-modernize';
-const API_ENDPOINT = 'https://moderntongue-pi77xsyu2-sel1nabds-projects.vercel.app/api/translate-free';
+const API_ENDPOINT = 'https://moderntongue.vercel.app/api/translate-free';
 const quotaStore = new QuotaStore('translation-usage');
 const memoryTranslationViews = new Map();
 const VIEW_TTL_MS = 5 * 60 * 1000;
