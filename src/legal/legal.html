@@ -22,44 +22,68 @@
       <!-- Privacy Policy Tab -->
       <section id="privacy-tab" class="tab-content active">
         <h2>Privacy Policy</h2>
-        <p class="last-updated">Last Updated: November 6, 2025</p>
+        <p class="last-updated">Last Updated: November 2025</p>
 
         <!-- ADD YOUR PRIVACY POLICY TEXT BELOW -->
         <div class="legal-text">
-          <h3>Data Collection</h3>
+          <h3>Overview</h3>
           <p>
-            ModernTongue does NOT collect, store, or transmit any personal information.
+            ModernTongue is a Chrome extension that translates historical English into modern language using Groq's free Llama 3.1 API.
+            Your privacy is important to us — we designed ModernTongue to process text securely and locally whenever possible,
+            without collecting personal data.
           </p>
 
-          <h3>What We Access</h3>
+          <h3>Data Collection & Usage</h3>
           <p>
-            <strong>Text Input:</strong> When you translate text, it is sent to our secure translation API hosted on Vercel.
-            This text is processed in real-time and not stored.
+            <strong>No personal data collected:</strong> ModernTongue does not collect, store, or share any personal information,
+            browsing history, or user identifiers.
           </p>
           <p>
-            <strong>Local Storage:</strong> Your translation quota (timestamps only) is stored locally in your browser.
-            This never leaves your device.
+            <strong>Translation data:</strong> When you request a translation, only the highlighted or pasted text is sent from your
+            browser to your configured Vercel endpoint, which then communicates with Groq's API to generate a modern-language translation.
+          </p>
+          <p>
+            <strong>Local storage:</strong> Your daily usage quota (up to 50 translations per day) is stored locally in your browser
+            using localStorage. This information never leaves your device.
+          </p>
+          <p>
+            <strong>API key:</strong> You provide your own Groq API key, stored privately in your Vercel deployment. The extension
+            never accesses, logs, or transmits your key directly.
           </p>
 
           <h3>Third-Party Services</h3>
+          <p>ModernTongue relies on:</p>
+          <ul>
+            <li>Groq API (for text translation)</li>
+            <li>Vercel (as a hosting proxy for API requests)</li>
+          </ul>
           <p>
-            <strong>Groq API:</strong> Translation requests are processed through Groq's LLM API.
-            No user identification is included.
+            These services may log technical data (e.g., request time, IP address) in accordance with their own privacy policies.
+            ModernTongue does not control or retain these logs.
           </p>
 
-          <h3>No Tracking</h3>
+          <h3>Offline Use</h3>
           <p>
-            We do not use analytics, cookies, or any tracking mechanisms.
+            If you're offline or exceed the daily limit, translations are handled locally via an offline regex fallback.
+            No external connections occur during offline mode.
           </p>
 
-          <h3>Data Retention</h3>
+          <h3>Your Control</h3>
           <p>
-            Zero. We don't store any user data.
+            You can uninstall ModernTongue at any time via chrome://extensions. This removes all local data and stops all functionality.
+            You can also reset quota data manually from Chrome's storage settings.
+          </p>
+
+          <h3>Changes to This Policy</h3>
+          <p>
+            We may update this Privacy Policy occasionally to reflect improvements or compliance changes. Updated versions will be
+            posted with a revised "Last updated" date.
           </p>
 
           <h3>Contact</h3>
           <p>
-            Questions? Email: <a href="mailto:support@moderntongue.com">support@moderntongue.com</a>
+            For any privacy-related questions, please reach out at
+            <a href="mailto:uniwaycontactuk@gmail.com">uniwaycontactuk@gmail.com</a>
           </p>
         </div>
         <!-- END PRIVACY POLICY -->
