@@ -1,0 +1,223 @@
+/* Legal Page Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.legal-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Header */
+.legal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legal-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Tabs */
+.legal-tabs {
+  display: flex;
+  background: #f5f5f5;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.tab-btn:hover {
+  background: rgba(102, 126, 234, 0.05);
+  color: #667eea;
+}
+
+.tab-btn.active {
+  color: #667eea;
+  background: white;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #667eea;
+}
+
+/* Content */
+.legal-content {
+  padding: 32px 24px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.last-updated {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.legal-text {
+  color: #444;
+  line-height: 1.7;
+}
+
+.legal-text h3 {
+  font-size: 18px;
+  color: #667eea;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.legal-text p {
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.legal-text a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.legal-text a:hover {
+  text-decoration: underline;
+}
+
+.legal-text strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Footer */
+.legal-footer {
+  background: #f9f9f9;
+  padding: 16px 24px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.legal-footer p {
+  color: #999;
+  font-size: 13px;
+}
+
+/* Scrollbar Styling */
+.legal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.legal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.legal-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.legal-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
+  .legal-container {
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .legal-content {
+    max-height: calc(100vh - 200px);
+  }
+
+  .tab-btn {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+}

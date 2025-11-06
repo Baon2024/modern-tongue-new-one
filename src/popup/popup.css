@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   gap: 18px;
   padding: 20px;
+  padding-bottom: 12px;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.92);
   border-radius: 18px;
@@ -150,4 +151,24 @@ body {
 
 .popup__quotaText:last-child {
   margin-bottom: 0;
+}
+
+.popup__footer {
+  text-align: center;
+  padding-top: 8px;
+  margin-top: 4px;
+  border-top: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.popup__legal-link {
+  font-size: 11px;
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.popup__legal-link:hover {
+  color: #4f46e5;
+  text-decoration: underline;
 }

@@ -137,3 +137,9 @@ async function syncQuotaFromBackground() {
 
 hydrateQuotaFromCache();
 syncQuotaFromBackground();
+
+// Legal page link
+document.getElementById('legal-link').addEventListener('click', (e) => {
+  e.preventDefault();
+  chrome.tabs.create({ url: chrome.runtime.getURL('src/legal/legal.html') });
+});
