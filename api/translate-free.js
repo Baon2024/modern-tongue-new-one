@@ -1,7 +1,7 @@
 // Get your free API key from https://console.groq.com
 const GROQ_API_KEY = process.env.GROQ_API_KEY || '';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
-const MODEL = 'llama-3.1-70b-versatile'; // Fast and accurate
+const MODEL = 'llama-3.3-70b-versatile'; // Latest recommended model (replaces 3.1)
 
 function allowCors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
