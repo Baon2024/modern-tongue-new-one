@@ -34,6 +34,27 @@ See [docs/GROQ_SETUP.md](docs/GROQ_SETUP.md) for detailed setup instructions.
 
 ## How it works
 
-You get 50 translations per day (rolling 24-hour window). Translations go through your Vercel endpoint to Groq's Llama 3.1 70B model, which is way better at historical English than traditional translation models. If that fails, an enhanced fallback handles 100+ archaic terms, verb conjugations, and common patterns.
+You get 50 translations per day (rolling 24-hour window). Translations go through your Vercel endpoint to Groq's Llama 3.3 70B model, which is way better at historical English than traditional translation models. If that fails, an enhanced fallback handles 100+ archaic terms, verb conjugations, and common patterns.
 
 All quota data stays in your browser's local storage. No tracking, just your Groq API key.
+
+---
+
+## Publishing to Chrome Web Store
+
+Want to publish this extension? See the comprehensive guides:
+
+- 📋 **[Pre-Deployment Checklist](docs/PRE_DEPLOYMENT_CHECKLIST.md)** - Complete checklist before submission
+- 🎨 **[Icons Guide](docs/ICONS_GUIDE.md)** - Generate all required icon sizes
+- 🚀 **[Chrome Web Store Deployment](docs/CHROME_WEB_STORE_DEPLOYMENT.md)** - Step-by-step publishing guide
+- 🐛 **[Troubleshooting](docs/TROUBLESHOOTING.md)** - Common issues and fixes
+
+**Quick summary:**
+1. Generate icons (16, 32, 48, 96, 128px)
+2. Create screenshots and promotional tile (440x280px)
+3. Write privacy policy and host it
+4. Create ZIP package (exclude api/, docs/, scripts/)
+5. Pay $5 Chrome Web Store developer fee
+6. Submit and wait 1-3 days for approval
+
+**Cost:** $5 one-time developer fee + $0 hosting (Vercel + Groq free tiers)

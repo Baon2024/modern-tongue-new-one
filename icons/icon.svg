@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main circle background -->
+  <circle cx="64" cy="64" r="60" fill="url(#grad1)"/>
+
+  <!-- Book/scroll icon -->
+  <path d="M38 45 L38 83 L90 83 L90 45 Z" fill="white" opacity="0.95"/>
+  <path d="M42 50 L86 50 M42 58 L86 58 M42 66 L86 66 M42 74 L78 74" stroke="#667eea" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Sparkle/modern indicator -->
+  <path d="M95 35 L98 42 L105 45 L98 48 L95 55 L92 48 L85 45 L92 42 Z" fill="#FFD700"/>
+  <circle cx="95" cy="45" r="2" fill="white"/>
+</svg>
