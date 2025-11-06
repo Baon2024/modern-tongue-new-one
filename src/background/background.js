@@ -1,5 +1,5 @@
-import { QuotaStore, MAX_TRANSLATIONS_PER_WINDOW } from './shared/quota.js';
-import { modernizeOffline } from './shared/fallback.js';
+import { QuotaStore, MAX_TRANSLATIONS_PER_WINDOW } from '../../shared/quota.js';
+import { modernizeOffline } from '../../shared/fallback.js';
 
 const CONTEXT_MENU_ID = 'modern-tongue-modernize';
 const API_ENDPOINT = 'https://moderntongue-pi77xsyu2-sel1nabds-projects.vercel.app/api/translate-free';
@@ -57,7 +57,7 @@ async function storeTranslationView(payload) {
 }
 
 function openTranslationViewer(viewId) {
-  const url = `${chrome.runtime.getURL('viewer.html')}?id=${encodeURIComponent(viewId)}`;
+  const url = `${chrome.runtime.getURL('src/viewer/viewer.html')}?id=${encodeURIComponent(viewId)}`;
   chrome.tabs.create({ url });
 }
 

@@ -1,4 +1,4 @@
-import { modernizeOffline } from './shared/fallback.js';
+import { modernizeOffline } from '../../shared/fallback.js';
 
 const form = document.getElementById('modernize-form');
 const textarea = document.getElementById('source-text');

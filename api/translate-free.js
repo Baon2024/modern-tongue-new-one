@@ -1,4 +1,7 @@
-const HUGGING_FACE_ENDPOINT = 'https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-en-en';
+// Get your free API key from https://console.groq.com
+const GROQ_API_KEY = process.env.GROQ_API_KEY || '';
+const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
+const MODEL = 'llama-3.1-70b-versatile'; // Fast and accurate
 
 function allowCors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -24,32 +27,46 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Missing text to modernise.' });
   }
 
+  if (!GROQ_API_KEY) {
+    return res.status(500).json({
+      error: 'GROQ_API_KEY not configured. Get one free at https://console.groq.com'
+    });
+  }
+
   try {
-    const hfResponse = await fetch(HUGGING_FACE_ENDPOINT, {
+    const groqResponse = await fetch(GROQ_ENDPOINT, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${GROQ_API_KEY}`
       },
-      body: JSON.stringify({ inputs: text })
+      body: JSON.stringify({
+        model: MODEL,
+        messages: [
+          {
+            role: 'system',
+            content: 'You are a historical English translator. Translate historical, archaic, or Shakespearean English (pre-20th century) into clear, natural modern English. Preserve the meaning and tone, but use contemporary vocabulary and grammar. Only output the translation, nothing else.'
+          },
+          {
+            role: 'user',
+            content: text
+          }
+        ],
+        temperature: 0.3,
+        max_tokens: 1000
+      })
     });
 
-    if (!hfResponse.ok) {
-      const details = await hfResponse.text();
-      return res.status(hfResponse.status).json({
-        error: 'Upstream translation service error.',
+    if (!groqResponse.ok) {
+      const details = await groqResponse.text();
+      return res.status(groqResponse.status).json({
+        error: 'Groq API error.',
         details
       });
     }
 
-    const data = await hfResponse.json();
-    let translation = '';
-
-    if (Array.isArray(data)) {
-      const first = data[0];
-      translation = first?.translation_text ?? '';
-    } else if (data && typeof data === 'object') {
-      translation = data.translation_text ?? '';
-    }
+    const data = await groqResponse.json();
+    const translation = data?.choices?.[0]?.message?.content?.trim();
 
     if (!translation) {
       return res.status(502).json({ error: 'Unexpected translation response.' });
