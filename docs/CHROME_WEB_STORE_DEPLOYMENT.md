@@ -65,23 +65,6 @@ Complete guide to publishing ModernTongue on the Chrome Web Store.
 ### **Create Distribution ZIP:**
 
 ```bash
-# From project root
-zip -r moderntongue-v1.0.0.zip \
-  manifest.json \
-  src/ \
-  shared/ \
-  api/ \
-  icons/ \
-  -x "*.git*" \
-  -x "*node_modules*" \
-  -x "*.DS_Store" \
-  -x "*docs/*" \
-  -x "*scripts/*"
-```
-
-**Or use this cleaner method:**
-
-```bash
 # Create a clean build directory
 mkdir -p build
 cp -r src shared icons manifest.json build/
@@ -96,12 +79,11 @@ cd ..
 - ✅ manifest.json
 - ✅ src/ folder (all extension code)
 - ✅ shared/ folder (fallback & quota logic)
-- ✅ icons/ folder (all PNG icons)
+- ✅ icons/ folder (all PNG icons: 16, 32, 48, 96, 128)
 - ❌ api/ folder (NOT needed - stays on Vercel)
 - ❌ docs/ folder
 - ❌ node_modules/
 - ❌ .git/
-- ❌ scripts/
 
 ---
 

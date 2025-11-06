@@ -64,18 +64,12 @@ Use this checklist before submitting to Chrome Web Store.
 ## ☑️ Assets & Branding
 
 ### Icons
-- [ ] **All icon sizes generated**
+- [ ] **All icon sizes added to icons/ folder**
   - [ ] icons/icon16.png (16x16)
   - [ ] icons/icon32.png (32x32)
   - [ ] icons/icon48.png (48x48)
   - [ ] icons/icon96.png (96x96)
   - [ ] icons/icon128.png (128x128)
-
-  **Generate with:**
-  ```bash
-  ./scripts/generate-icons.sh
-  # Or use: https://svgtopng.com/
-  ```
 
 - [ ] **Icons display correctly**
   - Load extension in chrome://extensions
@@ -272,12 +266,10 @@ Use this checklist before submitting to Chrome Web Store.
 # Clean build
 mkdir -p build
 cp -r src shared icons manifest.json build/
-cd build
-zip -r ../moderntongue-v1.0.0.zip .
-cd ..
+cd build && zip -r ../moderntongue-v1.0.0.zip . && cd ..
 ```
 
-- [ ] **ZIP created:** moderntongue-v1.0.0.zip
+- [ ] **ZIP created:** moderntongue-v1.0.0.zip (should be ~100-500 KB)
 - [ ] **ZIP tested:** Unzip and load in Chrome to verify
 
 ### Double Check

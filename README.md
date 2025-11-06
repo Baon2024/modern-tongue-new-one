@@ -45,15 +45,14 @@ All quota data stays in your browser's local storage. No tracking, just your Gro
 Want to publish this extension? See the comprehensive guides:
 
 - 📋 **[Pre-Deployment Checklist](docs/PRE_DEPLOYMENT_CHECKLIST.md)** - Complete checklist before submission
-- 🎨 **[Icons Guide](docs/ICONS_GUIDE.md)** - Generate all required icon sizes
 - 🚀 **[Chrome Web Store Deployment](docs/CHROME_WEB_STORE_DEPLOYMENT.md)** - Step-by-step publishing guide
 - 🐛 **[Troubleshooting](docs/TROUBLESHOOTING.md)** - Common issues and fixes
 
 **Quick summary:**
-1. Generate icons (16, 32, 48, 96, 128px)
+1. Add icons (16, 32, 48, 96, 128px) to `icons/` folder
 2. Create screenshots and promotional tile (440x280px)
 3. Write privacy policy and host it
-4. Create ZIP package (exclude api/, docs/, scripts/)
+4. Create ZIP package (exclude api/, docs/)
 5. Pay $5 Chrome Web Store developer fee
 6. Submit and wait 1-3 days for approval
 
