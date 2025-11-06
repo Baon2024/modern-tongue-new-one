@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #4c6dff 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #5B6FC0 0%, #7B8FD8 100%);
   min-width: 360px;
   min-height: 480px;
 }
@@ -32,7 +32,7 @@ body {
   margin: 0;
   font-size: 22px;
   font-weight: 700;
-  color: #312e81;
+  color: #3D4E7F;
 }
 
 .popup__tagline {
@@ -57,7 +57,7 @@ body {
   resize: vertical;
   min-height: 140px;
   border-radius: 14px;
-  border: 1px solid rgba(99, 102, 241, 0.35);
+  border: 1px solid rgba(91, 111, 192, 0.35);
   padding: 12px 14px;
   font-size: 14px;
   line-height: 1.5;
@@ -68,8 +68,8 @@ body {
 
 .popup__textarea:focus {
   outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  border-color: #5B6FC0;
+  box-shadow: 0 0 0 3px rgba(91, 111, 192, 0.2);
 }
 
 .popup__submit {
@@ -79,14 +79,14 @@ body {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #5B6FC0, #7B8FD8);
   cursor: pointer;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .popup__submit:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 20px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 12px 20px rgba(91, 111, 192, 0.35);
 }
 
 .popup__submit:disabled {
@@ -103,7 +103,7 @@ body {
 }
 
 .popup__status--loading {
-  color: #4338ca;
+  color: #4A5EA0;
 }
 
 .popup__status--error {
@@ -142,7 +142,7 @@ body {
   background: rgba(255, 255, 255, 0.65);
   border-radius: 14px;
   padding: 12px;
-  box-shadow: inset 0 0 0 1px rgba(99, 102, 241, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(91, 111, 192, 0.1);
 }
 
 .popup__quotaText {
@@ -157,18 +157,18 @@ body {
   text-align: center;
   padding-top: 8px;
   margin-top: 4px;
-  border-top: 1px solid rgba(99, 102, 241, 0.1);
+  border-top: 1px solid rgba(91, 111, 192, 0.1);
 }
 
 .popup__legal-link {
   font-size: 11px;
-  color: #6366f1;
+  color: #5B6FC0;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .popup__legal-link:hover {
-  color: #4f46e5;
+  color: #4A5EA0;
   text-decoration: underline;
 }
