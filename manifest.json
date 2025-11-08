@@ -1,3 +1,4 @@
+
 {
   "manifest_version": 3,
   "name": "ModernTongue",
@@ -22,9 +23,7 @@
     }
   },
   "permissions": [
-    "activeTab",
     "contextMenus",
-    "scripting",
     "storage"
   ],
   "background": {
