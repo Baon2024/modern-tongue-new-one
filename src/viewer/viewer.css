@@ -7,11 +7,9 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at 15% 15%, rgba(91, 111, 192, 0.35), transparent 45%),
-    radial-gradient(circle at 85% 20%, rgba(123, 143, 216, 0.3), transparent 50%),
-    #0f172a;
-  color: #e2e8f0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  color: #1a1a1a;
   padding: 48px 16px;
   display: flex;
   align-items: center;
@@ -23,121 +21,149 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background: rgba(15, 23, 42, 0.7);
-  border-radius: 24px;
-  padding: 32px;
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.45);
-  backdrop-filter: blur(18px);
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  padding: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .viewer__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   text-align: center;
+}
+
+.viewer__brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.viewer__logo {
+  display: block;
+  flex-shrink: 0;
 }
 
 .viewer__title {
   margin: 0;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
 }
 
 .viewer__subtitle {
-  margin: 8px auto 0;
+  margin: 0;
   max-width: 520px;
-  color: rgba(226, 232, 240, 0.78);
+  color: #666666;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .viewer__status {
-  padding: 14px 16px;
-  border-radius: 18px;
+  padding: 16px 20px;
+  border-radius: 6px;
   font-size: 14px;
-  background: rgba(59, 130, 246, 0.18);
-  color: #bfdbfe;
+  background: #f0f4ff;
+  color: #667eea;
   text-align: center;
+  border: 1px solid #d4dcf7;
+}
+
+.viewer__status--loading {
+  background: #f0f4ff;
+  color: #667eea;
+  border-color: #d4dcf7;
 }
 
 .viewer__status--error {
-  background: rgba(239, 68, 68, 0.18);
-  color: #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
 }
 
 .viewer__result {
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
 
 .viewer__banner {
-  padding: 10px 14px;
-  border-radius: 14px;
+  padding: 12px 16px;
+  border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 .viewer__banner--warning {
-  background: rgba(251, 191, 36, 0.18);
-  color: #fbbf24;
+  background: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fde68a;
 }
 
 .viewer__card {
-  background: rgba(15, 23, 42, 0.88);
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.12);
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .viewer__cardTitle {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  color: #f8fafc;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
 }
 
 .viewer__mono {
   margin: 0;
-  font-family: 'IBM Plex Mono', 'Fira Code', Consolas, monospace;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   white-space: pre-wrap;
-  color: #e0f2fe;
+  color: #1a1a1a;
 }
 
 .viewer__mono--subtle {
-  color: rgba(226, 232, 240, 0.72);
+  color: #666666;
 }
 
 .viewer__button {
   align-self: flex-start;
   border: none;
-  border-radius: 999px;
-  padding: 8px 18px;
+  border-radius: 6px;
+  padding: 10px 20px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  color: #0f172a;
-  background: linear-gradient(135deg, #7B8FD8, #9BAAE6);
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  color: #ffffff;
+  background: #667eea;
+  transition: background-color 0.15s ease;
+  letter-spacing: -0.005em;
 }
 
 .viewer__button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(91, 111, 192, 0.35);
+  background: #5568d3;
 }
 
 .viewer__button:active {
-  transform: translateY(0);
-  box-shadow: none;
+  background: #4a5bc4;
 }
 
 .viewer__hint {
   margin: 0;
   font-size: 12px;
-  color: rgba(148, 163, 184, 0.85);
+  color: #999999;
   text-align: right;
+  line-height: 1.5;
 }
 
 @media (max-width: 640px) {
@@ -147,5 +173,15 @@ body {
 
   .viewer {
     padding: 24px;
+  }
+
+  .viewer__brand {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .viewer__logo {
+    width: 32px;
+    height: 32px;
   }
 }

@@ -16,7 +16,7 @@ function setStatus(text, variant = 'neutral') {
 
 function toggleSubmitting(isSubmitting) {
   submitButton.disabled = isSubmitting;
-  submitButton.textContent = isSubmitting ? 'Modernising…' : '✨ Modernise';
+  submitButton.textContent = isSubmitting ? 'Modernising…' : 'Modernise';
 }
 
 async function sendMessage(message) {

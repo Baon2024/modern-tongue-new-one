@@ -10,7 +10,10 @@
   <body>
     <main class="popup">
       <header class="popup__header">
-        <h1 class="popup__title">ModernTongue</h1>
+        <div class="popup__brand">
+          <img src="../../icons/icon.png" alt="" class="popup__logo" width="32" height="32" />
+          <h1 class="popup__title">ModernTongue</h1>
+        </div>
         <p class="popup__tagline">Give historic prose a modern voice.</p>
       </header>
 
@@ -24,6 +27,7 @@
           placeholder="Enter pre-20th century English..."
           required
         ></textarea>
+        <p class="popup__hint">Paste text here or highlight text on any page and right-click to modernise</p>
         <button type="submit" id="modernize-button" class="popup__submit">Modernise</button>
       </form>
 
